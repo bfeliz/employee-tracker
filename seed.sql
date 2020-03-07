@@ -1,3 +1,5 @@
+-- database filler
+
 USE employee_db;
 
 INSERT INTO department (department)
@@ -49,7 +51,7 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("vikki", "tanner", 5, 4);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("kelly", "daniels", 4, NULL);
+VALUES ("kelly", "daniels", 6, NULL);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("scott", "rogers", 4, 6);
+VALUES ("scott", "rogers", 7, 6);

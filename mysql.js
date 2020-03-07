@@ -1,5 +1,6 @@
 const mysql = require("mysql");
 
+// info to create data pool
 const pool = mysql.createPool({
     host: "localhost",
     user: "root",
