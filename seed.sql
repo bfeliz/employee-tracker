@@ -1,15 +1,15 @@
 USE employee_db;
 
-INSERT INTO department (name)
+INSERT INTO department (department)
 VALUES ("hr");
 
-INSERT INTO department (name)
+INSERT INTO department (department)
 VALUES ("business_office");
 
-INSERT INTO department (name)
+INSERT INTO department (department)
 VALUES ("nursing");
 
-INSERT INTO department (name)
+INSERT INTO department (department)
 VALUES ("therapy");
 
 INSERT INTO role (title, salary, department_id)
