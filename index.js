@@ -4,6 +4,8 @@ const viewDept = require("./lib/viewDept");
 const viewRole = require("./lib/viewRole");
 const viewEmp = require("./lib/viewEmp");
 const updateRole = require("./lib/updateRole");
+const addDepart = require("./lib/addDept");
+const addRole = require("./lib/addRole");
 
 (async function startQuest() {
     try {
@@ -16,6 +18,8 @@ const updateRole = require("./lib/updateRole");
                 "View Employees",
                 "View Roles",
                 "View Departments",
+                "Add Role",
+                "Add Department",
                 "Update Role",
                 "Exit Program"
             ]
@@ -31,6 +35,12 @@ const updateRole = require("./lib/updateRole");
             case "View Departments":
                 viewDept.getDept();
                 break;
+            case "Add Role":
+                addRole.addRole();
+                break;
+            case "Add Department":
+                addDepart.addDepartment();
+                break;
             case "Update Role":
                 updateRole.updateRole();
                 break;
@@ -43,5 +53,4 @@ const updateRole = require("./lib/updateRole");
     } catch (err) {
         console.log(err);
     }
-    // startQuest();
 })();
