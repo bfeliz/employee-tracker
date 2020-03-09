@@ -29,25 +29,53 @@ const addEm = require("./lib/addEmp");
         // switch statement for various actions based on prompt results
         switch (start.action) {
             case "View Employees":
-                viewEmp.getEmp();
+                viewEmp.getEmp(function(err, res) {
+                    if (err) throw err;
+                    console.table(res);
+                    startQuest();
+                });
                 break;
             case "View Roles":
-                viewRole.getRole();
+                viewRole.getRole(function(err, res) {
+                    if (err) throw err;
+                    console.table(res);
+                    startQuest();
+                });
                 break;
             case "View Departments":
-                viewDept.getDept();
+                viewDept.getDept(function(err, res) {
+                    if (err) throw err;
+                    console.table(res);
+                    startQuest();
+                });
                 break;
             case "Add Employee":
-                addEm.addEmployee();
+                addEm.addEmployee(function(err, res) {
+                    if (err) throw err;
+                    console.log("Employee added");
+                    startQuest();
+                });
                 break;
             case "Add Role":
-                addRole.addRole();
+                addRole.addRole(function(err, res) {
+                    if (err) throw err;
+                    console.log("New role added");
+                    startQuest();
+                });
                 break;
             case "Add Department":
-                addDepart.addDepartment();
+                addDepart.addDepartment(function(err, res) {
+                    if (err) throw err;
+                    console.log("New department added");
+                    startQuest();
+                });
                 break;
             case "Update Role":
-                updateRole.updateRole();
+                updateRole.updateRole(function(err, res) {
+                    if (err) throw err;
+                    console.log("Role updated");
+                    startQuest();
+                });
                 break;
             case "Exit Program":
                 process.exit(0);

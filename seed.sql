@@ -3,55 +3,55 @@
 USE employee_db;
 
 INSERT INTO department (department)
-VALUES ("hr");
+VALUES ("HR");
 
 INSERT INTO department (department)
-VALUES ("business_office");
+VALUES ("Business Office");
 
 INSERT INTO department (department)
-VALUES ("nursing");
+VALUES ("Nursing");
 
 INSERT INTO department (department)
-VALUES ("therapy");
+VALUES ("Therapy");
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("hr director", 50000.00, 1);
+VALUES ("HR Director", 50000.00, 1);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("bom", 60000.00, 2);
+VALUES ("BOM", 60000.00, 2);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("abom", 30000.00, 2);
+VALUES ("ABOM", 30000.00, 2);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("don", 80000.00, 3);
+VALUES ("DON", 80000.00, 3);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("adon", 60000.00, 3);
+VALUES ("ADON", 60000.00, 3);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("dor", 80000.00, 4);
+VALUES ("DOR", 80000.00, 4);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("therapist", 70000.00, 4);
+VALUES ("Therapist", 70000.00, 4);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("janet", "grinch", 1, NULL);
+VALUES ("Janet", "Grinch", 1, NULL);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("betty", "fuentes", 2, NULL);
+VALUES ("Betty", "Fuentes", 2, NULL);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("kim", "otter", 3, 2);
+VALUES ("Kim", "Otter", 3, 2);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("linda", "apple", 4, NULL);
+VALUES ("Linda", "Apple", 4, NULL);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("vikki", "tanner", 5, 4);
+VALUES ("Vikki", "Tanner", 5, 4);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("kelly", "daniels", 6, NULL);
+VALUES ("Kelly", "Daniels", 6, NULL);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("scott", "rogers", 7, 6);
+VALUES ("Scott", "Rogers", 7, 6);
