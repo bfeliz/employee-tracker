@@ -6,6 +6,7 @@ const viewEmp = require("./lib/viewEmp");
 const updateRole = require("./lib/updateRole");
 const addDepart = require("./lib/addDept");
 const addRole = require("./lib/addRole");
+const addEm = require("./lib/addEmp");
 
 (async function startQuest() {
     try {
@@ -18,6 +19,7 @@ const addRole = require("./lib/addRole");
                 "View Employees",
                 "View Roles",
                 "View Departments",
+                "Add Employee",
                 "Add Role",
                 "Add Department",
                 "Update Role",
@@ -34,6 +36,9 @@ const addRole = require("./lib/addRole");
                 break;
             case "View Departments":
                 viewDept.getDept();
+                break;
+            case "Add Employee":
+                addEm.addEmployee();
                 break;
             case "Add Role":
                 addRole.addRole();
