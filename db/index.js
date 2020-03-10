@@ -25,6 +25,17 @@ module.exports = {
             }
         ]);
     },
+    updateManager: function(employee) {
+        // update the employee table with the new chosen manager
+        return mysql.query("UPDATE employee SET ? WHERE ?", [
+            {
+                manager_id: employee.managerID
+            },
+            {
+                id: employee.employeeID
+            }
+        ]);
+    },
     getDepartments: function() {
         return mysql.query("SELECT * FROM department");
     },
@@ -34,6 +45,13 @@ module.exports = {
     getEmployeesWithManagers: function() {
         return mysql.query(
             "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.department AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee AS manager on manager.id = employee.manager_id;"
+        );
+    },
+    getEmployeesByManager: function({ managerName }) {
+        console.log(managerName);
+        return mysql.query(
+            "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.department AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee AS manager on manager.id = employee.manager_id WHERE employee.manager_id=?",
+            [managerName]
         );
     },
     getRoles: function(cb) {
