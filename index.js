@@ -50,6 +50,25 @@ const prompt = require("./lib/prompt");
                 });
                 await db.updateManager(updatedManager);
                 break;
+            case "Delete Department":
+                const deletedDept = await db.getDepartments();
+                await db.delDept(await prompt.delDept(deletedDept));
+                break;
+            case "Delete Role":
+                const deletedRole = await db.getRoles();
+                await db.delRole(await prompt.delRole(deletedRole));
+                break;
+            case "Delete Employee":
+                const deletedEmp = await db.getEmployees();
+                await db.delEmployee(await prompt.delEmployee(deletedEmp));
+                break;
+            case "View Department Budget":
+                const budget = await db.getDepartments();
+                console.table(
+                    await db.getBudget(await prompt.getBudget(budget))
+                );
+                // console.table(await db.getBudget());
+                break;
             default:
                 process.exit(0);
         }
