@@ -77,6 +77,7 @@ Bonus - View sum of salaries by departments:
 
 JavaScript - programming language <br>
 Bootstrap - CSS Framework <br>
+Node.js - JavaScript runtime
 Inquirer - npm package for command line prompts <br>
 console.table - npm package to render tables in terminal <br>
 mysql - npm package for database manipulation <br>
