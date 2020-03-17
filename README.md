@@ -13,7 +13,7 @@ To run this application: <br>
 1. Clone a copy of the repository and download to your device<br>
 2. Run an 'npm install' from your terminal to install the necessary npm packages. <br>
 3. If you do not have Node.JS installed on your machine you will need to install that as well, see documentation [here](https://nodejs.org/en/download/). Otherwise proceed to next step. <br>
-4. Run 'node app.js' from your terminal and the application will begin.
+4. Run 'node index.js' from your terminal and the application will begin.
 
 ## GIFs illustrating functionality
 
